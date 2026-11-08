@@ -1,4 +1,4 @@
-// 👽 Exportar tus subreddits — Reddit
+// Exportar tus subreddits — Reddit
 // Úsalo en: https://old.reddit.com (con tu sesión iniciada)
 // Pega todo este código en la consola (F12 → Consola) y presiona Enter.
 // Descarga "subreddits.csv" con: Subreddit, Miembros, Link
@@ -28,5 +28,5 @@
   a.click();
 
   console.log(subs.map((s) => s.display_name_prefixed).join('\n'));
-  console.log(`✅ ${subs.length} subreddits descargados`);
+  console.log(`${subs.length} subreddits descargados`);
 })();

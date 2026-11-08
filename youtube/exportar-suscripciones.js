@@ -1,4 +1,4 @@
-// 📺 Exportar suscripciones de YouTube
+// Exportar suscripciones de YouTube
 // Úsalo en: https://www.youtube.com/feed/channels
 // Pega todo este código en la consola (F12 → Consola) y presiona Enter.
 // Descarga un archivo "suscripciones.txt" con: Nombre del canal | Link
@@ -31,5 +31,5 @@
   link.click();
 
   console.log(canales.join('\n'));
-  console.log(canales.length + ' canales descargados ✅');
+  console.log(canales.length + ' canales descargados');
 })();

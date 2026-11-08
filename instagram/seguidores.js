@@ -1,4 +1,4 @@
-// 📸 ¿Quién no me sigue de vuelta? — Instagram
+// ¿Quién no me sigue de vuelta? — Instagram
 // Úsalo en: https://www.instagram.com (con tu sesión iniciada, en computadora)
 // Pega todo este código en la consola (F12 → Consola) y presiona Enter.
 // Descarga "instagram.csv" con: Usuario, Nombre, Estado, Link
@@ -10,7 +10,7 @@
 (async () => {
   const id = document.cookie.match(/ds_user_id=(\d+)/)?.[1];
   if (!id) {
-    console.log('❌ Inicia sesión en instagram.com primero');
+    console.log('Inicia sesión en instagram.com primero');
     return;
   }
 
@@ -26,7 +26,7 @@
         { headers: H, credentials: 'include' }
       );
       if (!r.ok) {
-        console.log('⚠️ Instagram pidió pausa (' + r.status + '), esperando 1 min…');
+        console.log('Instagram pidió pausa (' + r.status + '), esperando 1 min…');
         await sleep(60000);
         continue;
       }
@@ -64,5 +64,5 @@
   a.click();
 
   const noTeSiguen = filas.filter((f) => f.includes('"No te sigue"')).length;
-  console.log(`✅ Listo: ${seguidores.length} seguidores, ${seguidos.length} seguidos, ${noTeSiguen} no te siguen de vuelta`);
+  console.log(`Listo: ${seguidores.length} seguidores, ${seguidos.length} seguidos, ${noTeSiguen} no te siguen de vuelta`);
 })();
